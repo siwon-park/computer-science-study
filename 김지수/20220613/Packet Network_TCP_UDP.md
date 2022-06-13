@@ -31,7 +31,7 @@
 
 - 패킷 교환 방식
 
-![Packet_Switching](C:\Users\Jisu\Downloads\Packet_Switching.gif)
+![Packet_Switching](Packet Network_TCP_UDP.assets/Packet_Switching.gif)
 
 
 
@@ -70,7 +70,7 @@
 
     
 
-    ![KakaoTalk_20220613_205414487](C:\Users\Jisu\Documents\카카오톡 받은 파일\KakaoTalk_20220613_205414487.jpg)
+    ![KakaoTalk_20220613_205414487](Packet Network_TCP_UDP.assets/KakaoTalk_20220613_205414487.jpg)
 
   - 해당 송신버퍼와 수신버퍼를 통해 수신버퍼가 받을 수 있는 다음 byte가 있는 경우에 송신버퍼가 보낼 것이 다면 데이터를 송신한다. 
 
@@ -79,7 +79,7 @@
 - TCP는 스트림 배달을 제공하지만, 하위계층인 IP 프로토콜은 패킷의 형태로 데이터를 전달한다. 
 - TCP는 이러한 일련의 바이트를 세그먼트라는 패킷으로 그룹화한다. 세그먼트의 크기는 그때 그때 다르다. 
 
-![KakaoTalk_20220613_210209828](C:\Users\Jisu\Documents\카카오톡 받은 파일\KakaoTalk_20220613_210209828.jpg)
+![KakaoTalk_20220613_210209828](Packet Network_TCP_UDP.assets/KakaoTalk_20220613_210209828.jpg)
 
 
 
@@ -110,9 +110,9 @@
 
 :three: 클라이언트 TCP는 ACK 세그먼트를 서버 TCP로 전송
 
-![KakaoTalk_20220613_213605959](C:\Users\Jisu\Documents\카카오톡 받은 파일\KakaoTalk_20220613_213605959.jpg)
+![KakaoTalk_20220613_213605959](Packet Network_TCP_UDP.assets/KakaoTalk_20220613_213605959.jpg)
 
-![KakaoTalk_20220613_213623699](C:\Users\Jisu\Documents\카카오톡 받은 파일\KakaoTalk_20220613_213623699.jpg)
+![KakaoTalk_20220613_213623699](Packet Network_TCP_UDP.assets/KakaoTalk_20220613_213623699.jpg)
 
 
 
@@ -140,7 +140,7 @@
 
 :four: 송신 TCP가 수신 TCP에게 ACK 세그먼트 전송
 
-![KakaoTalk_20220613_215527188](C:\Users\Jisu\Documents\카카오톡 받은 파일\KakaoTalk_20220613_215527188.jpg)
+![KakaoTalk_20220613_215527188](Packet Network_TCP_UDP.assets/KakaoTalk_20220613_215527188.jpg)
 
 
 
@@ -168,3 +168,17 @@
 
 - 정보를 주고 받을 때, 정보를 보내거나 받는다는 신호 절차를 거치지 않고 적은 정보량만을 보내기 때문에  TCP보다 속도가 빠르다. 연결을 설정하고 해제하는 과정이 존재하지 않기 때문에 네트워크의 부하가 작지만 데이터가 전송되었는지 여부를 보장하지는 못한다. 
 - 그렇기 때문에 연속성과 성능이 중요한 서비스인 실시간 서비스(streaming)에 자주 사용되며 파일전송과같은 신뢰성이 필요한 서비스에서는 잘 사용하지 않는다.. 
+
+
+
+
+
+
+
+
+
+출처 :
+
+1. B.A.Forouzan, "TCP/IP 프로토콜", 4th edition, McGraw-Hill Korea, 2012
+
+2. https://ko.wikipedia.org/wiki/%ED%8C%A8%ED%82%B7_%EA%B5%90%ED%99%98
