@@ -12,7 +12,33 @@ computer-science 발표 스터디 입니다.
 
 ## ✅ STUDY!
 
+### 1)  네트워크
 
+| 주제                                                         | 발표일   | 발표자                                 |
+| ------------------------------------------------------------ | -------- | -------------------------------------- |
+| [패킷 네트워크 개요 / TCP vs UDP](https://github.com/JaeKP/computer-science-study/tree/master/%EA%B9%80%EC%A7%80%EC%88%98/20220613) | 22/06/15 | [김지수](https://github.com/jijisusu3) |
+|                                                              |          |                                        |
+|                                                              |          |                                        |
+
+<br>
+
+### 2) 데이터 베이스
+
+| 주제                                                         | 발표일   | 발표자                                |
+| ------------------------------------------------------------ | -------- | ------------------------------------- |
+| [NoSQL](https://github.com/JaeKP/computer-science-study/blob/master/%EC%A0%95%EC%A0%9C%ED%9D%AC/0615_NoSQL.pdf) | 22/06/15 | [정제희](https://github.com/jeheehee) |
+|                                                              |          |                                       |
+|                                                              |          |                                       |
+
+<br>
+
+### 3) 운영체제
+
+| 주제                                                         | 발표일   | 발표자                                      |
+| ------------------------------------------------------------ | -------- | ------------------------------------------- |
+| [운영체제와 컴퓨터](https://github.com/JaeKP/computer-science-study/blob/master/%EA%B9%80%ED%98%95%EC%A3%BC/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EC%99%80%20%EC%BB%B4%ED%93%A8%ED%84%B0.pptx) | 22/06/15 | [김형주](https://github.com/brotherweekkim) |
+|                                                              |          |                                             |
+|                                                              |          |                                             |
 
 <br>
 
