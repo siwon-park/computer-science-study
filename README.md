@@ -19,7 +19,7 @@ computer-science 발표 스터디 입니다.
 | [운영체제와 컴퓨터](김형주/20220613)               | 22/06/15 | [김형주](https://github.com/brotherweekkim) |
 | [NoSQL](정제희/20220613)                           | 22/06/15 | [정제희](https://github.com/jeheehee)       |
 
-
+<br>
 
 ### 1) 컴퓨터-구조
 
@@ -40,8 +40,6 @@ computer-science 발표 스터디 입니다.
 | 2    | :white_large_square: | 11장 입출력 구조                    |        |           |          |
 | 2    | :white_large_square: | 12장 메모리 구조                    |        |           |          |
 
----
-
 <br>
 
 ### 2)  운영체제
@@ -58,8 +56,6 @@ computer-science 발표 스터디 입니다.
 | 2    | :white_large_square: | 9장 가상 메모리                             |        |           |        |
 | 2    | :white_large_square: | 10, 11장 파일 시스템과 구현                 |        |           |        |
 | 2    | :white_large_square: | 12장 디스크 관리 및 스케쥴링                |        |           |        |
-
----
 
 <br>
 
