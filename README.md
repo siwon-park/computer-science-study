@@ -23,89 +23,94 @@ computer-science 발표 스터디 입니다.
 
 ### 1) 컴퓨터-구조
 
-| 파트 | 진행상태             | 강의내용                            | 발표자         | 발표 주제                                                  | 발표일   |
-| ---- | -------------------- | ----------------------------------- | -------------- | ---------------------------------------------------------- | -------- |
-| 1    | ✅                    | 컴퓨터-구조 개요                    | 박재경         | [폰노이만의 컴퓨터구조](박재경/220622)                     | 22/06/22 |
-| 1    | ✅                    | 1장 디지털 논리 회로 및 강의소개    | 박재현, 이윤경 | [논리회로](박재현/논리회로), [카르노맵](이윤경/2022-06-22) | 22/06/22 |
-| 1    | :white_large_square: | 2장 디지털 부품                     |                |                                                            |          |
-| 1    | :white_large_square: | 3장 데이터의 표현                   |                |                                                            |          |
-| 1    | :white_large_square: | 4장 레지스터 전송과 마이크로 연산   |                |                                                            |          |
-| 1    | :white_large_square: | 5장 기본 컴퓨터의 구조와 설계-Part1 |                |                                                            |          |
-| 1    | :white_large_square: | 5장 기본 컴퓨터의 구조와 설계-Part2 |                |                                                            |          |
-| 2    | :white_large_square: | 6장 기본 컴퓨터 프로그래밍          |                |                                                            |          |
-| 2    | :white_large_square: | 7장 마이크로 프로그램               |                |                                                            |          |
-| 2    | :white_large_square: | 8장 중앙 처리 장치                  |                |                                                            |          |
-| 2    | :white_large_square: | 9장 파이프라인과 벡터 처리          |                |                                                            |          |
-| 2    | :white_large_square: | 10장 컴퓨터 산술 연산               |                |                                                            |          |
-| 2    | :white_large_square: | 11장 입출력 구조                    |                |                                                            |          |
-| 2    | :white_large_square: | 12장 메모리 구조                    |                |                                                            |          |
+| 진행상태             | 강의내용                            | 발표자         | 발표 주제                                                    | 발표일   |
+| -------------------- | ----------------------------------- | -------------- | ------------------------------------------------------------ | -------- |
+| ✅                    | 컴퓨터-구조 개요                    | 박재경         | [폰노이만의 컴퓨터구조](박재경/220622)                       | 22/06/22 |
+| ✅                    | 1장 디지털 논리 회로 및 강의소개    | 박재현, 이윤경 | [논리회로](박재현/논리회로), [카르노맵](이윤경/2022-06-22)   | 22/06/22 |
+| ✅                    | 2장 디지털 부품                     | 박시원, 황상윤 | [레지스터](박시원/발표자료), [ROM과 플래시 메모리](황상윤/발표자료) | 22/06/29 |
+| ✅                    | 3장 데이터의 표현                   | 김동완         | [데이터의 종류](김동완/발표자료_김동완)                      | 22/06/29 |
+| :white_large_square: | 4장 레지스터 전송과 마이크로 연산   |                |                                                              |          |
+| :white_large_square: | 5장 기본 컴퓨터의 구조와 설계-Part1 |                |                                                              |          |
+| :white_large_square: | 5장 기본 컴퓨터의 구조와 설계-Part2 |                |                                                              |          |
+| :white_large_square: | 6장 기본 컴퓨터 프로그래밍          |                |                                                              |          |
+| :white_large_square: | 7장 마이크로 프로그램               |                |                                                              |          |
+| :white_large_square: | 8장 중앙 처리 장치                  |                |                                                              |          |
+| :white_large_square: | 9장 파이프라인과 벡터 처리          |                |                                                              |          |
+| :white_large_square: | 10장 컴퓨터 산술 연산               |                |                                                              |          |
+| :white_large_square: | 11장 입출력 구조                    |                |                                                              |          |
+| :white_large_square: | 12장 메모리 구조                    |                |                                                              |          |
 
 <br>
 
 ### 2)  운영체제
 
-| 파트 | 진행상태             | 강의내용                                    | 발표자 | 발표 주제 | 발표일 |
-| ---- | -------------------- | ------------------------------------------- | ------ | --------- | ------ |
-| 1    | :white_large_square: | 1, 2장 운영체제 개요 및 컴퓨터시스템의 구조 |        |           |        |
-| 1    | :white_large_square: | 3장 프로세스                                |        |           |        |
-| 1    | :white_large_square: | 4장 프로세스 관리                           |        |           |        |
-| 1    | :white_large_square: | 5장 CPU 스케쥴링                            |        |           |        |
-| 1    | :white_large_square: | 6장 프로세스 동기화                         |        |           |        |
-| 1    | :white_large_square: | 7장 교착상태                                |        |           |        |
-| 2    | :white_large_square: | 8장 메모리 관리                             |        |           |        |
-| 2    | :white_large_square: | 9장 가상 메모리                             |        |           |        |
-| 2    | :white_large_square: | 10, 11장 파일 시스템과 구현                 |        |           |        |
-| 2    | :white_large_square: | 12장 디스크 관리 및 스케쥴링                |        |           |        |
+| 진행상태             | 강의내용                                    | 발표자 | 발표 주제 | 발표일 |
+| -------------------- | ------------------------------------------- | ------ | --------- | ------ |
+| :white_large_square: | 1, 2장 운영체제 개요 및 컴퓨터시스템의 구조 |        |           |        |
+| :white_large_square: | 3장 프로세스                                |        |           |        |
+| :white_large_square: | 4장 프로세스 관리                           |        |           |        |
+| :white_large_square: | 5장 CPU 스케쥴링                            |        |           |        |
+| :white_large_square: | 6장 프로세스 동기화                         |        |           |        |
+| :white_large_square: | 7장 교착상태                                |        |           |        |
+| :white_large_square: | 8장 메모리 관리                             |        |           |        |
+| :white_large_square: | 9장 가상 메모리                             |        |           |        |
+| :white_large_square: | 10, 11장 파일 시스템과 구현                 |        |           |        |
+| :white_large_square: | 12장 디스크 관리 및 스케쥴링                |        |           |        |
 
 <br>
 
 ### 3) 네트워크
 
-| 파트 | 진행상태             | 강의내용                | 발표자 | 발표 주제 | 발표일 |
-| ---- | -------------------- | ----------------------- | ------ | --------- | ------ |
-| 1    | :white_large_square: | 1, 2장 네트워크와 모델  |        |           |        |
-| 1    | :white_large_square: | 3장 데이터 통신         |        |           |        |
-| 1    | :white_large_square: | 4장 IP 주소             |        |           |        |
-| 1    | :white_large_square: | 5장 ARP 프로토콜        |        |           |        |
-| 1    | :white_large_square: | 6장 IPv4, ICMP 프로토콜 |        |           |        |
-| 2    | :white_large_square: | 7장 전송계층 및 포트    |        |           |        |
-| 2    | :white_large_square: | 8장 UDP 비연결지향형    |        |           |        |
-| 2    | :white_large_square: | 9장 TCP 연결지향형      |        |           |        |
-| 2    | :white_large_square: | 10장 NAT와 포트포워딩   |        |           |        |
-| 2    | :white_large_square: | 11장 HTTP 프로토콜      |        |           |        |
+| 진행상태             | 강의내용                | 발표자 | 발표 주제 | 발표일 |
+| -------------------- | ----------------------- | ------ | --------- | ------ |
+| :white_large_square: | 1, 2장 네트워크와 모델  |        |           |        |
+| :white_large_square: | 3장 데이터 통신         |        |           |        |
+| :white_large_square: | 4장 IP 주소             |        |           |        |
+| :white_large_square: | 5장 ARP 프로토콜        |        |           |        |
+| :white_large_square: | 6장 IPv4, ICMP 프로토콜 |        |           |        |
+| :white_large_square: | 7장 전송계층 및 포트    |        |           |        |
+| :white_large_square: | 8장 UDP 비연결지향형    |        |           |        |
+| :white_large_square: | 9장 TCP 연결지향형      |        |           |        |
+| :white_large_square: | 10장 NAT와 포트포워딩   |        |           |        |
+| :white_large_square: | 11장 HTTP 프로토콜      |        |           |        |
 
 <br>
 
-## ✅ GIT CONVENTION
+## ✅ Git Flow
 
-### 1) COMMIT
+### 1) 메인 레파지토리를 fork 한다.
 
-- `type: 자유 `
-- **type: 하고자 하는 행위를  명령문으로 적는다.** 
-  - Add  Files
-  - Update Files
-  - Delete Files
-  - Merge Files
-  - etc..
-
-```bash
-git commit -m "AddFiles: 발표자료 업로드 "
-```
+- fork한 레파지토리를 local 저장소와 연결한다. `git clone`
+- 만약 메인 레파지토리의 변경 사항을 내 레파지토리와 local저장소에 반영하고 싶다면 
+  - fork한 레파지토리에서  `fetch`
+  - local저장소에서 `git pull origin master`
+  - 레파지토리와 loacal을 업데이트 하는 것은 새로운 내용을 커밋하기 전에 꼭 해야 한다. 
 
 <br>
 
-### 2) PR 
+### 2) 작업을 하기 전에 이슈 생성하기
 
-- PR 제목: `이름 / 큰 주제 / 세부 주제`
+- 메인 레파지토리에 이슈를 발행한다.
+- 제목 컨벤션: [action] 과목 이름:  내용
+  - 예시: **[Docs] 컴퓨터 구조:  2주차 학습자료 업로드**
+  - action: 어떤 활동을 하는가. 
+  - 내용 : 구체적인 내용을 서술 한다. (몇주차인지 작성을 해야 한다.)
+- **Assignees, Milestone, Label을 설정해야 한다.** 
 
-```
-박재경 / 운영체제 / 프로세스와 스레드
-```
+<br>
+
+### 3) 로컬에서 작업 후 fork 한 레파지토리로 커밋하기
+
+- 커밋 컨벤션: #이슈 번호 action: 상세 설명
+  - 예시: **#44 docs: 2주차 학습 자료 업로드**  
 
 <br>
 
-- PR 내용: 자유 
-  - 다른 스터디원들이 자료를 이해하는 데 도움이 되는 설명을 간단히 적어주세요.
-  - 발표자료를 만들면서 느낀 간단회고를 작성하는 것도 좋습니다.
+### 4) PR과 merge를 통해 메인 Repository에 변경사항 반영하기
+
+- 타이틀 컨벤션: 커밋 메시지랑 동일하다. 
+- 내용에 `resolve #이슈번호` 를 작성해야 Issue와 PR이 연결이 된다. 
+- PR후 merge 
 
 <br>
+
