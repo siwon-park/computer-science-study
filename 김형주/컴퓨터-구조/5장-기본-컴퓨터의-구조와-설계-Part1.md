@@ -97,16 +97,97 @@
 
 ### 컴퓨터 명령어 (Computer Instructions)
 
-- 
+- 기본 컴퓨터 명령어의 종류
+  - MRI 명령 7가지
+    - 메모리 레퍼런스 명령
+    - 메모리 주소를 참조해서 메모리에 접근해서 행동을 함
+    - 종류
+      - AND
+      - ADD
+      - LDA
+      - STA
+      - BUN
+      - BSA
+      - ISZ
+
+  - RRI 명령 12가지
+    - 레지스터 참조 명령
+    - 레지스터를 바꾸는 명령
+    - 종류
+      - CLA
+      - CLE
+      - CMA
+      - CME
+      - CIR
+      - CIL
+      - INC
+      - SPA
+      - SNA
+      - SZA
+      - SZE
+      - HLT
+
+  - IO 명령 6가지
+    - 종류
+      - INP
+      - OUT
+      - SKI
+      - SKO
+      - ION
+      - IOF
+
 
 ### 타이밍과 제어 (Timing and Control)
 
-- 
+- 명령어 실행 타이밍 예
+
+![img](./명령어 실행 타이밍 예.png)
 
 ### 명령어 사이클 (Instruction Cycle)
 
-- 
+- 명령어 사이클 단계
+  1. 메모리에서 명령어 가져오기(Fetch)
+  2. 명령어 디코딩
+  3. 유효주소(Effective Address) 계산
+  4. 명령어 실행
+
+- Fetch와 Decode
+
+  T<sub>0</sub> : $\ AR \leftarrow PC$
+
+  T<sub>1</sub> : $\ IR \leftarrow M[AR], PC \leftarrow PC + 1$
+  
+  T<sub>2</sub> : D<sub>0</sub> ... D<sub>7</sub> $\leftarrow decode IR(12-14), AR \leftarrow IR(0-11), I \leftarrow IR(15)$
+
+- 명령어의 종류 결정
+  - MRI 명령어 여부
+  - RRI 명령어 여부
+  - IO 명령 결정
+
+- 레지스터 참조 명령어의 종류와 동작
+  - CLA
+  - CLE
+  - CMA
+  - CME
+  - CIR
+  - CIL
+  - INC
+  - SPA
+  - SNA
+  - SZA
+  - SZE
+  - HLT
 
 ### 메모리 참조 명령어 (Memory-Reference Instuctions)
 
--
+- 메모리 참조 명령어의 종류와 동작
+  - AND
+  - ADD
+  - LDA
+  - STA
+  - BUN
+  - BSA
+    - 함수, 서브 루틴의 구현에 사용
+    - 간접주소 사용의 전형적인 예
+  - ISZ
+    - Loop 제어문 구현에 사용
