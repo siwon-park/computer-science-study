@@ -139,16 +139,97 @@
 
 ### 컴퓨터 명령어 (Computer Instructions)
 
-- 
+##### 기본 컴퓨터 명령어의 종류
+
+![image-20220713090909790](5장-기본-컴퓨터의-구조와-설계-Part1.assets/image-20220713090909790.png)
+
+- MRI(memory reference instruction) 명령 7가지
+
+  - 메모리를 참조하는 명령
+  - 주소비트를 가지고 메인 메모리의 주소에 찾아가서 무언가 처리하는(메모리에 반드시 접근!)
+
+  ![image-20220713085850715](5장-기본-컴퓨터의-구조와-설계-Part1.assets/image-20220713085850715.png)
+
+  I = 0 은 직접 주소 명령, I = 1 은 간접 주소 명령
+
+  ex)	AND : AC의 값과 memory 주소의 값을 AND하고 다시 AC로 보내라
+
+- RRI(register reference instruction) 명령 12가지
+
+  - 레지스터를 참조하는 명령
+  - 레지스터와 레지스터 사이 or 레지스터를 바꾸거나 다루는 명령
+
+  ![image-20220713085331490](5장-기본-컴퓨터의-구조와-설계-Part1.assets/image-20220713085331490.png)
+
+- IO(input output instruction) 명령 6가지
+
+  - IO 장치들에 대해서 명령어를 수행해서, 입력이나 출력 동작을 수행하는 명령
+
+  ![image-20220713085544267](5장-기본-컴퓨터의-구조와-설계-Part1.assets/image-20220713085544267.png)
 
 ### 타이밍과 제어 (Timing and Control)
 
-- 
+- 명령어 실행 타이밍 예
+
+  - D3T4 : SC <- 0 (디코더는 D3출력이 1(011),  T4가 1인 경우, 시퀀스 카운터를 0으로 만드는 동작)
+
+    D3와 T4의 값을 AND 게이트에 넣고, 출력 값을 SC의 clear에 넣음 (0100 -> 0000)
+
+    ![image-20220713092602996](5장-기본-컴퓨터의-구조와-설계-Part1.assets/image-20220713092602996.png)
+
 
 ### 명령어 사이클 (Instruction Cycle)
 
-- 
+##### 명령어 사이클 단계
+
+1. 메모리에서 명령어 가져오기(Fetch)
+   1. 메모리의 코드 세그멘트에 있는 명령어를 IR 레지스터(명령어 레지스터)에 가져오기 (버스를 통해서)
+2. 명령어 디코딩
+3. 유효주소(Effective Address) 계산
+4. 명령어 실행
+
+##### Fetch와 Decode
+
+- T0 : AR <- PC
+- T1 : IR <- M[AR], PC <- PC + 1
+- T2: D0 ... D7 <- decode IR(12-14), AR <- IR(0-11), I <- IR(15)
+
+##### 
 
 ### 메모리 참조 명령어 (Memory-Reference Instuctions)
 
--
+- 메모리 참조 명령어의 종류와 동작
+
+  <img src="5장-기본-컴퓨터의-구조와-설계-Part1.assets/image-20220713160141620.png" alt="image-20220713160141620" style="zoom:80%;" />
+
+  - AND
+    - D0T4: DR <- M[AR]
+    - D0T5: AC <- AC and DR, SC <- 0
+  - ADD
+    - D1T4: DR <- M[AR]
+    - D1T5: AC <- AC + DR, E <- Cout, SC <- 0
+  - LDA
+    - D2T4: DR <- M[AR]
+    - D2T5: AC <- DR, SC <- 0
+  - STA
+    - D3T4: M[AR] <- AC, SC <- 0
+  - BUN
+    - D4T4: PC <- AR, SC <- 0
+
+  <img src="5장-기본-컴퓨터의-구조와-설계-Part1.assets/image-20220713160341822.png" alt="image-20220713160341822" style="zoom:80%;" />
+
+  - BSA
+    - 함수, 서브 루틴의 구현에 사용
+    - 간접주소 사용의 전형적인 예
+    - D5T4: M[AR] <- PC, AR <- AR + 1
+    - D5T5: PC <- AR, SC <- 0
+  - ISZ
+    - Loop 제어문 구현에 사용 (for, while)
+    - D6T4: DR <- M[AR]
+    - D6T5: DR <- DR + 1
+    - D6T6: M[AR] <- DR
+      - if (DR = 0) then (PC <- PC + 1), SC <- 0
+
+- 제어 흐름
+
+  ![image-20220713160411782](5장-기본-컴퓨터의-구조와-설계-Part1.assets/image-20220713160411782.png)
