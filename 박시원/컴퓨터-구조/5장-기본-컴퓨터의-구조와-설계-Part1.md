@@ -96,16 +96,81 @@ CPU 칩셋 == 컴퓨터 / 나머지 === 주변 장치
 
 ### 컴퓨터 명령어 (Computer Instructions)
 
-- 
+#### 기본 컴퓨터 명령어의 종류
+
+- MRI 명령(Memory Reference Instruction); 메모리와 관련된 명령어 - 7가지
+  - AND, ADD, LDA, STA, BUN, BSA, ISZ
+- RRI 명령(Register Reference Instruction); 레지스터를 다루거나 레지스터 간 이동하는 명령 - 12가지
+  - CLA, CLE, CMA, CME, CIR, CIL, INC, SPA, SNA, SZA, SZE, HLT
+- I/O(Input - Output Instruction) 명령; 입출력에 대한 명령 - 6가지
+  - INP, OUT, SKI, SKO, ION, IOF
+
+<br>
 
 ### 타이밍과 제어 (Timing and Control)
 
-- 
+- (예시)
 
 ### 명령어 사이클 (Instruction Cycle)
 
-- 
+#### 명령어 사이클 단계
+
+- 메모리(코드 세그먼트)에서 IR 레지스터로 명령어 가져오기(Fetch)
+- 명령어 디코딩
+- 유효 주소(Effective Address) 계산(간접 주소의 경우 실제 오퍼랜드가 있는 주소를 찾아야함)
+  - 직접 주소의 경우, 직접 주소가 유효 주소임
+- 명령어 실행
+
+#### Fetch와 Decode(=> Fetch Cycle)
+
+- T0: AR ← PC
+
+  - ##### 프로그램 카운터의 의의; 지금 가져와야할 명령어의 주소를 항상 기억하고 있는 레지스터
+
+- T1: IR ← M[AR], PC ← PC + 1
+
+  - 메모리에 있는 명령어를 IR로 가져오고, 다음 명령어를 가져올 수 있도록 프로그램 카운터의 값을 1 증가시킴
+
+- T2: D0, D1, .... , D7 ← IR(12 - 14), AR ← IR(0-11), I(FF) ← IR(15)
+
+  - I는 플립플롭이고, 직접 주소인지 간접 주소인지 판별함
+
+#### 명령어의 종류 결정(유효 주소 계산 전)
+
+- MRI 명령어, RRI 명령어, IO 명령어 여부 결정
+
+<br>
 
 ### 메모리 참조 명령어 (Memory-Reference Instuctions)
 
--
+#### AND
+
+- D0
+
+#### ADD
+
+- D1
+
+#### LDA
+
+- D2
+- AC에 데이터를 집어넣으려면 메모리로부터 데이터를 가져와서 DR에 먼저 넣고, DR에서 AC로 넣는 것임 => AC와 공통버스와 직접적인 연결이 되어 있지 않음
+
+#### STA
+
+- D3
+
+#### BUN
+
+- D4
+
+#### BSA
+
+- D5
+- 함수, 서브루틴의 구현에 사용
+- 간접 주소 사용의 전형적인 예
+
+#### ISZ
+
+- D6
+- Loop(While문, For문) 제어문 구현에 사용
