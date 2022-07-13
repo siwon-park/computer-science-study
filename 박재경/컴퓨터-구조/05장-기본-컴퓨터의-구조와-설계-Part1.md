@@ -129,18 +129,112 @@
 
 [강의 링크](https://www.youtube.com/watch?v=T2oKxvinK84&list=PLc8fQ-m7b1hCHTT7VH2oo0Ng7Et096dYc&index=11)
 
-### 컴퓨터 명령어 (Computer Instructions)
+### 1) 컴퓨터 명령어 (Computer Instructions)
 
-- 
+#### (1) 종류
 
-### 타이밍과 제어 (Timing and Control)
+- MRI 명령어(Memory-reference instruction) : 7가지
+  - 메모리를 참조하는 명령어
+  - 주소비트를 가지고 메인메모리에 접근하는 명령어를 의미한다. 
 
-- 
+- RRI 명령어(Register -reference instruction): 12가지
+  - 레지스터를 참조하는 명령어
+  - 레지스터 사이의 혹은 레지스터를 다루는 명령으로 구성되어있다.
 
-### 명령어 사이클 (Instruction Cycle)
+- IO 명령어(Input-output instruction):6가지
+  - Io 장치 명령어
+  - 입력과 출력과 관련된 명령어
 
-- 
 
-### 메모리 참조 명령어 (Memory-Reference Instuctions)
+<br>
 
--
+#### (2) 명령어 형식
+
+Opcode에 따라 명령어 종류를 구분할 수 있다. 
+
+ ![image-20220710203831467](https://raw.githubusercontent.com/JaeKP/image_repo/main/img/image-20220710203831467.png)
+
+<br>
+
+### 2) 타이밍과 제어 (Timing and Control)
+
+기본 컴퓨터의 모든 플립플롭과 레지스터는 주 클럭 발생기에 의하여 제어된다.
+
+![image-20220710220125593](https://raw.githubusercontent.com/JaeKP/image_repo/main/img/image-20220710220125593.png)
+
+<br>
+
+- 메모리에서 읽어온 명령어는 공통 버스 시스템에 있는 명령어 레지스터 (IR)에 놓이게 된다.
+- 이 중에서 연산 코드 부분이 3X8 디코더에 의해 D0에서 D7까지 디코딩된다. 
+- 명령어 레지스터의 15번째 비트는 I로 표시되는 플립플롭에 전송되며, 나머지 0에서 11번째 비트들은 제어 논리 게이트로 연결된다.
+  4비트 순차 카운터(SC)의 출력은 디코더에 의해 T0에서 T15까지 16개의 타이밍 신호를 생성한다.
+
+<br>
+
+### 3) 명령어 사이클 (Instruction Cycle)
+
+![image-20220710221306576](https://raw.githubusercontent.com/JaeKP/image_repo/main/img/image-20220710221306576.png)
+
+<br>
+
+#### (1) 명령어 사이클 단계
+
+- 메모리에서 명령어 가져오기 (Fetch)
+- 명령어 디코딩
+- 유효주소 (Effective Address) 계산
+- 명령어 실행
+
+<br>
+
+#### (2) Fetch
+
+메모리의 CodeSegment에 있는 기계어 코드 명령어를 IR(명령어 레지스터)로 가져온다. 
+
+- CodeSegment 몇 번지에 있는 명령어를 가져올지 파악한다.  `AR <- PC`
+  - 명령어 번지는 PC(Program Counter: 지금 가져와야할 명령어의 주소를 기억하는 레지스터)에 저장되어 있다.
+  - 버스를 통해 PC에 있는 주소를 AR레지스터로 가져온다.  
+  - AR레지스터에 있는 값이 들어오면 그 순간에 메모리의 해당 번지의 값이 자동으로 읽히게 된다. 
+
+- 메모리로부터 IR레지스터로 버스를 통해 이동한다. `IR <- M[AR]`
+  - IR 레지스터의 LD입력을 1로 하여 버스의 신호를 IR 레지스터로 이동시킨다. 
+- 명령어가 IR로 들어왔기 때문에 그다음에 가져와야할 명령어를 다시 가르킨다. (일반적으도 다음번지인다.)
+  - PC <- PC+1
+
+<br>
+
+#### (3) 명령어 디코딩
+
+- IR에 들어간 명령어를 디코딩한다. 3bit Opcode가 무엇인지 판단한다. 
+  - 그 결과, 디코더의 어느 출력을 1로할 것 인지 결정한다. 
+- 그리고 IR에 있는 다른 주소비트들을 다시 AR로 보낸다. (데이터를 가져오기 위해서)
+  - AR <- IR(0-11)
+
+<br>
+
+#### (4) 유효주소 계산
+
+- 3bit Opcode를 통해 어떤 명령어 인지 파악한 후, 명령어를 실행준비한다.  
+  - MRI 명령어 여부 (D7이 0이다)
+  - RRI 명령어 여부 (D7이 1이다)
+  - IO 명령 결정 (D7이 1이다)
+
+- MRI일 경우, 직접 주소인지 간접주소인지 파악하여 실제 명령어의 주소를 가져온다. 
+  - Operand가 있는 주소를 알아내는 것이다.
+
+<br>
+
+#### (5) 명령어 실행
+
+- 명령어를 실행한다. 
+- 명령어 실행이 끝나면, 다음 명령어를 다시 Fetch한다.
+
+<br>
+
+### 4) 메모리 참조 명령어 (Memory-Reference Instuctions)
+
+![image-20220710223030046](https://raw.githubusercontent.com/JaeKP/image_repo/main/img/image-20220710223030046.png)
+
+<br>
+
+![image-20220710223019916](https://raw.githubusercontent.com/JaeKP/image_repo/main/img/image-20220710223019916.png)
+
