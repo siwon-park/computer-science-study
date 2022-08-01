@@ -32,9 +32,9 @@ computer-science 발표 스터디 입니다.
 | :white_check_mark:   | 4장 레지스터 전송과 마이크로 연산   | 김형주, 김지수 | [고정소수점과 부동소수점](김형주/발표자료/20220706/데이터의-표현-0706-김형주-2회차-발표-자료.pdf), <br />[레지스터 전송](김지수/20220706/레지스터의-전송.pdf) | 22/07/06 |
 | :white_check_mark:   | 5장 기본 컴퓨터의 구조와 설계-Part1 | 박재현         | [명령어 사이클](박재현/메모리-사이클/명령어-사이클.pdf)      | 22/07/13 |
 | :white_check_mark:   | 5장 기본 컴퓨터의 구조와 설계-Part2 | 박재경         | [입출력 장치와 인터럽트](박재경/220713/입출력장치와-인터럽트.pdf) | 22/07/13 |
-| :white_large_square: | 6장 기본 컴퓨터 프로그래밍          |                |                                                              |          |
-| :white_large_square: | 7장 마이크로 프로그램               |                |                                                              |          |
-| :white_large_square: | 8장 중앙 처리 장치                  |                |                                                              |          |
+|:white_check_mark:    | 6장 기본 컴퓨터 프로그래밍          | 박시원         | [기계어와 어셈블리어](https://github.com/CS-Study-Archive/computer-science-study/blob/master/%EB%B0%95%EC%8B%9C%EC%9B%90/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/220719_%EA%B8%B0%EA%B3%84%EC%96%B4%EC%99%80%20%EC%96%B4%EC%85%88%EB%B8%94%EB%A6%AC%EC%96%B4.pdf)|  22/07/19 |
+|:white_check_mark: | 7장 마이크로 프로그램               |                |                                                              |          |
+| :white_check_mark: | 8장 중앙 처리 장치                  |      박재현           |[명령어 세트](https://github.com/CS-Study-Archive/computer-science-study/blob/master/%EB%B0%95%EC%9E%AC%ED%98%84/%EB%AA%85%EB%A0%B9%EC%96%B4%20%EC%84%B8%ED%8A%B8/%EB%AA%85%EB%A0%B9%EC%96%B4_%EC%84%B8%ED%8A%B8.pdf)                                                     |  22/07/26        |
 | :white_large_square: | 9장 파이프라인과 벡터 처리          |                |                                                              |          |
 | :white_large_square: | 10장 컴퓨터 산술 연산               |                |                                                              |          |
 | :white_large_square: | 11장 입출력 구조                    |                |                                                              |          |
