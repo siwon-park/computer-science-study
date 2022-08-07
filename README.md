@@ -37,7 +37,7 @@ computer-science 발표 스터디 입니다.
 | :white_check_mark: | 8장 중앙 처리 장치                  |      박재현           |[명령어 세트](https://github.com/CS-Study-Archive/computer-science-study/blob/master/%EB%B0%95%EC%9E%AC%ED%98%84/%EB%AA%85%EB%A0%B9%EC%96%B4%20%EC%84%B8%ED%8A%B8/%EB%AA%85%EB%A0%B9%EC%96%B4_%EC%84%B8%ED%8A%B8.pdf)                                                     |  22/07/26        |
 | :white_large_square: | 9장 파이프라인과 벡터 처리          |                |                                                              |          |
 | :white_large_square: | 10장 컴퓨터 산술 연산               |                |                                                              |          |
-| :white_large_square: | 11장 입출력 구조                    |                |                                                              |          |
+| :white_large_square: | 11장 입출력 구조                    |         김지수, 정제희       |         [비동기 전송]() <br />  [인터럽트](정제희/20220802/인터럽트.pdf)                                                 |          |
 | :white_large_square: | 12장 메모리 구조                    |                |                                                              |          |
 
 <br>
