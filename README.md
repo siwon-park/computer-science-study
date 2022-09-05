@@ -37,8 +37,8 @@ computer-science 발표 스터디 입니다.
 | :white_check_mark: | 8장 중앙 처리 장치                  |      박재현           |[명령어 세트](https://github.com/CS-Study-Archive/computer-science-study/blob/master/%EB%B0%95%EC%9E%AC%ED%98%84/%EB%AA%85%EB%A0%B9%EC%96%B4%20%EC%84%B8%ED%8A%B8/%EB%AA%85%EB%A0%B9%EC%96%B4_%EC%84%B8%ED%8A%B8.pdf)                                                     |  22/07/26        |
 | :white_large_square: | 9장 파이프라인과 벡터 처리          |                |                                                              |          |
 | :white_large_square: | 10장 컴퓨터 산술 연산               |                |                                                              |          |
-| :white_large_square: | 11장 입출력 구조                    |         김지수, 정제희       |         [비동기 전송]() <br />  [인터럽트](정제희/20220802/인터럽트.pdf)                                                 |          |
-| :white_large_square: | 12장 메모리 구조                    |                |                                                              |          |
+| :white_check_mark: | 11장 입출력 구조                    |         김지수, 정제희       |         [비동기 전송]() <br />  [인터럽트](정제희/20220802/인터럽트.pdf)                                                 |          |
+| :white_check_mark: | 12장 메모리 구조                    |                |                                                              |          |
 
 <br>
 
@@ -46,7 +46,7 @@ computer-science 발표 스터디 입니다.
 
 | 진행상태             | 강의내용                                    | 발표자 | 발표 주제 | 발표일 |
 | -------------------- | ------------------------------------------- | ------ | --------- | ------ |
-| :white_large_square: | 1, 2장 운영체제 개요 및 컴퓨터시스템의 구조 |        |           |        |
+| :white_check_mark: | 1, 2장 운영체제 개요 및 컴퓨터시스템의 구조 | 박시원 | [커널](박시원/발표자료/220830_커널.pdf) | 22/08/30  |
 | :white_large_square: | 3장 프로세스                                |        |           |        |
 | :white_large_square: | 4장 프로세스 관리                           |        |           |        |
 | :white_large_square: | 5장 CPU 스케쥴링                            |        |           |        |
