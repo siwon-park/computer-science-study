@@ -42,8 +42,8 @@
 | 1    | :white_check_mark: | 2        | [2장 운영체제 구조](운영체제/2장-운영체제-구조.md)  | 2022/08/27                                   |
 | 2 | :white_check_mark: | 4 | [3장 프로세스](운영체제/3장-프로세스.md) | 2022/09/06 |
 | 2 | :white_check_mark: | 4 | [4장 프로세스 관리](운영체제/4장-프로세스-관리.md) | 2022/09/06 |
-| 2, 3 | :white_check_mark: | 3 | [5장 CPU 스케줄링](운영체제/5장-CPU-스케줄링.md) | 2022/09/06, |
-|      |                    |          |                                                 |                                              |
+| 2, 3 | :white_check_mark: | 3 | [5장 CPU 스케줄링](운영체제/5장-CPU-스케줄링.md) | 2022/09/06,2022/09/13 |
+| 4, 5 | :white_check_mark: | 3 | [6장-Process-Synchronization](운영체제/6장-Process-Synchronization.md) | 2022/09/13 |
 |      |                    |          |                                                 |                                              |
 |      |                    |          |                                                 |                                              |
 |      |                    |          |                                                 |                                              |
