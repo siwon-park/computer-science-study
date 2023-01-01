@@ -1,31 +1,202 @@
-# 
+# 6장-IPv4, ICMP 프로토콜
+
+## 1. IPv4 프로토콜
+
+### IPv4가 하는 일
+
+> 네트워크 상에서 데이터를 교환하기 위한 프로토콜(오로지 전달만 담당)
+
+단, **데이터가 정확하게 전달될 것을 보장하지는 않음**
+
+- 중복된 패킷을 전달하거나, 패킷의 순서를 잘못 전달할 가능성이 있음
+- 데이터의 정확하고 순차적인 전달은 상위 프로토콜인 TCP에서 담당
 
 
 
-### [IPv4 프로토콜](https://youtu.be/_i8O_o2ozlE?list=PL0d8NnikouEWcF1jJueLdjRIC4HsUlULi)
+### IPv4 프로토콜의 구조
 
-- 
+![image](https://user-images.githubusercontent.com/93081720/209083499-90761c2e-435a-47fe-82ef-e3e57ee660f5.png)
 
-### [ICMP 프로토콜](https://youtu.be/JaBCIUsFE74?list=PL0d8NnikouEWcF1jJueLdjRIC4HsUlULi)
+20 Byte + 옵션(최대 60Byte)
 
-- 
+- 보통 옵션 없이 사용하므로 20바이트
 
-### [IPv4, ICMP프로토콜 실습](https://youtu.be/8ZwTvTuZlVw?list=PL0d8NnikouEWcF1jJueLdjRIC4HsUlULi)
+#### version
 
-- 
+IP프로토콜의 버전
 
-### [라우팅 테이블](https://youtu.be/CjnKNIyREHA?list=PL0d8NnikouEWcF1jJueLdjRIC4HsUlULi)
+- 16진수 1개가 4비트이므로, 4라는 숫자가 옴
+- IPv6는 위 그림과는 구조가 전혀 다름
 
-- 
+#### IHL
 
-### [라우팅 테이블 확인 실습](https://youtu.be/tVntagSJctc?list=PL0d8NnikouEWcF1jJueLdjRIC4HsUlULi)
+IP 헤더의 길이
 
-- 
+- 2진수를 4비트로 표현
+- 그러나 IP의 길이가 최소 20 Byte에서 최대 60 Byte이므로 4비트의 공간으로 나타낼 수 없음
+- 20 ~ 60을 4로 나누면 5 ~ 15이므로 해당 값을 이진수화하여 표현함
+- 따라서 일반적으로 20 Byte이므로 5라는 숫자가 옴 (0101)
 
-### [IPv4 조각화 이론](https://youtu.be/_AONcID7Sc8?list=PL0d8NnikouEWcF1jJueLdjRIC4HsUlULi)
+#### Type Of Service(TOS)
 
-- 
+지금은 쓰이지 않아서 0으로 비워둠
 
-### [IPv4 조각화 실습](https://youtu.be/QKEL9aBgHtg?list=PL0d8NnikouEWcF1jJueLdjRIC4HsUlULi)
+#### Total Length
 
--
+페이로드의 길이까지 합한 전체의 길이
+
+#### Identification + IP flags + Fragment Offset
+
+데이터가 크면 쪼개야 하는데, 이를 알아볼 수 있게 하는 값
+
+- fragment offset
+  - 패킷을 받았을 때, 원본 데이터의 패킷 순서를 기억하는 값
+  - 떨어진 정도를 기록하여, 원본 데이터 패킷을 올바르게 조립할 수 있게 함
+
+#### Time To Live(TTL)
+
+패킷이 살아있을 수 있는 기간
+
+- 패킷의 생존 기간을 지정하는 이유?
+  - 패킷의 전달 경로가 잘못되어 순환이 발생할 경우 계속 같은 네트워크에서 돌아다니므로 DDOS 공격으로 오인될 수 있음
+  - 따라서 패킷의 생존 기간을 정해두는 것임
+
+- 운영 체제마다 설정하는 값이 다름
+
+#### Protocol
+
+상위 프로토콜의 정보를 알 수 있는 값
+
+- ICMP(3계층, 01), TCP(4계층, 06), UDP(4계층, 17)
+
+#### Header Checksum
+
+헤더가 오류가 있는지 없는지 확인하는 값
+
+<br>
+
+## 2. ICMP 프로토콜
+
+### ICMP가 하는 일
+
+> Internet Control Message Protocol, 인터넷 제어 메세지 프로토콜
+
+네트워크 컴퓨터 위에서 돌아가는 운영체제에서 오류 메세지를 전송 받는데 주로 쓰인다.
+
+프로토콜 구조의 타입과 코드를 통해 오류 메세지를 전송받음
+
+**상대방과 통신이 되나 안 되나 확인하는 역할**을 하는데 쓰임
+
+### ICMP 프로토콜의 구조
+
+![image](https://user-images.githubusercontent.com/93081720/209088631-15a6cd93-d9c8-46d1-9dd6-be4c67ade04f.png)
+
+#### Type
+
+대분류
+
+여러 코드가 있지만 아래의 타입은 기본적으로 알아둬야 함
+
+- 0번: 응답 / 8번: 요청
+
+  - 0: Echo Reply
+
+  - 8: Echo
+
+- 3번: 목적지에 도달 불가 / 11번: 요청 시간 만료
+
+  - 3번은 목적지까지 못 간 경우이고 (경로 상의 문제)
+    - 예) 중간에 라우터가 잘못되어 목적지까지 못 간 경우
+  - 11번은 목적지까지 갔긴 하나 응답이 오지 않은 경우 (상대방에 문제가 있음)
+    - 예) 상대방이 방화벽을 켜놓았을 경우
+  - 3: Destination Unreachable
+
+  - 11: Time Exceeded
+
+- 5번: 라우팅 테이블을 원격으로 수정 (보안과 관련 있음)
+
+  - 5: Redirect
+
+#### Code
+
+소분류
+
+<br>
+
+## 3. 라우팅 테이블
+
+> 최적의 이동 경로를 저장해 놓은 테이블 => 지도 역할
+
+netstat -r
+
+라우팅 테이블에 적혀있는 네트워크 대역들에게만 찾아서 갈 수 있음
+
+<br>
+
+## 4. 다른 네트워크와 통신 과정
+
+### 다른 네트워크까지 내 패킷의 이동 과정
+
+![image](https://user-images.githubusercontent.com/93081720/209093937-5cdc1c76-8f2e-4a6f-8d41-411e97f6c23b.png)
+
+#### 상황
+
+네트워크 대역은 4개로 나눠어져 있음
+
+A에서 B로 통신을 하려고 함
+
+A의 라우팅 테이블에 B의 네트워크 주소가 있어야 함 => 모르면 못 감
+
+#### 과정
+
+1. A의 라우팅 테이블을 확인
+2. ICMP 요청 프로토콜 생성(8번 - 요청)
+3. IPv4 프로토콜 생성(상위 프로토콜 ICMP -> 1번)
+4. 이더넷 프로토콜 생성(MAC 주소는 게이트 웨이의 MAC 주소 작성 -> cc:cc:cc:ccc:cc:cc)
+5. 공유기까지 전송
+6. 공유기의 라우팅 테이블 확인 및 IPv4, ICMP 프로토콜 확인(어디로 보내야 하는지)
+7. 이더넷 프로토콜 재생성(목적지 MAC 주소, 출발지 MAC 주소 재작성)
+8. 계속 비슷한 과정을 거치다가 B까지 전송
+9. B는 응답(0번)으로 ICMP 프로토콜 생성, IPv4 프로토콜 생성해서 다시 위의 과정 반복
+
+
+
+이더넷 프로토콜은 네트워크 대역이 바뀔 때마다 새로 작성
+
+<br>
+
+## 5. IPv4의 조각화
+
+### 조각화란?
+
+> 큰 패킷을 작은 패킷으로 쪼개는 것
+
+큰 패킷들이 작은 MTU(Maximum Transmission Unit)를 갖는 링크를 통하여 전송되려면 여러 개의 작은 패킷으로 조각화되어 전송되어야 한다.
+
+즉, 목적지까지 패킷을 전달하는 과정에서 통과하는 각 라우터마다 전송에 적합한 프레임으로 변환이 필요하다.
+
+일단 조각화되면, 최종 목적지에 도달할 때까지 재조립되지 않는다. 재조립은 항상 최종 수신지에서만 가능
+
+![image](https://user-images.githubusercontent.com/93081720/209259087-2c234433-523a-4088-abb1-b04c7be69eb5.png)
+
+#### Data
+
+11980 Byte의 데이터를 보내려고하는데, 첫 번째 라우터의 MTU가 3300 Byte이므로 최대 3300 Byte으로 쪼개야한다.
+
+단, 이 3300 Byte는 IPv4 프로토콜의 크기를 포함한 것으로 보낼 수 있는 데이터의 페이로드는 IPv4의 20 Byte ~ 60 Byte를 뺀 최대 3280 Byte에서 3240 Byte이다.
+
+#### MF
+
+MF는 More Fragment의 약자로, 이후에도 패킷이 있는지 없는지를 나타낸다. => 1: 있음, 0: 없음
+
+#### Offset
+
+offset의 값은 이전 fragment의 데이터의 Byte를 8로 나눈 값으로 작성한다.
+
+<br>
+
+### 조각화 과정
+
+※ 이더넷 프로토콜(Eth, 14 Byte)은 MTU를 통과하고 난 다음에 붙는다!
+
+![image](https://user-images.githubusercontent.com/93081720/209260713-508a7c1f-64e2-4126-ac6e-7a41f7467bb0.png)
